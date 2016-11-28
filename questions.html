@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link href="hover.css" rel="stylesheet" media="all">
+	<style>
+		body {background-color: powderblue !important;}
+	</style>
+</head>
+<body>
+
+<div class="row">
+	<div class="col-md-12 text-center">
+		<h1>Fixed vs Growth Mindset Quiz</h1>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+	<div class="col-md-5 col-md-offset-1 question">
+	 <h4>Your intelligence is something very basic about you that you cannot change very much.</h4>
+	</div>
+	<div class="col-md-5">
+		<div class="btn-group btn-group-justified ">
+		  <a href="#" class="btn btn-default hvr-grow" id="strong-agree">Strongly Agree</a>
+		  <a href="#" class="btn btn-default hvr-grow" id="agree">Agree</a>
+		  <a href="#" class="btn btn-default hvr-grow" id="disagree">Disagree</a>
+		  <a href="#" class="btn btn-default hvr-grow" id="strong-disagree">Strongly Disagree</a>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+    var questionList  = {
+    	questions: ["Your intelligence is something very basic about you that you cannot change very much", "No matter how much intelligence you have, you can always change it quite a bit","Only a few people will be truly good at sportss, you have to be born with the ability", "The harder you work at something, the better you will be", "I often get angry, upset or embarassed when I get feedback about my performance", "I appreciate when people, parents, coaches or teachers give me feedback about my performance", "Truly smart people do not need to try hard", "You can always change how intelligent you are", "You are a certain kind of person and there is not much that can be done to really change that","An important reason why I do my school work is that I enjoy learning new things"],
+    	SA: [0,3,0,3,0,3,0,3,0,3],
+    	A: [1,2,1,2,1,2,1,2,1,2],
+    	D: [2,1,2,1,2,1,2,1,2,1],
+    	SD: [3,0,3,0,3,0,3,0,3,0]
+    };
+	var counter = 0;
+	var score = 0;
+	$("#strong-agree").click(function(){
+			score += questionList.SA[counter];
+			counter++
+			$(".question").html("<h4>" + questionList.questions[counter] + "</h4>");
+			console.log(counter + " " + score);
+		}
+	)
+	$("#agree").click(function(){
+			score += questionList.A[counter];
+			counter++
+			$(".question").html("<h4>" + questionList.questions[counter] + "</h4>");
+			console.log(counter + " " + score);
+		}
+	)
+	$("#disagree").click(function(){
+			score += questionList.D[counter];
+			counter++
+			$(".question").html("<h4>" + questionList.questions[counter] + "</h4>");
+			console.log(counter + " " + score);
+		}
+	)
+	$("#strong-disagree").click(function(){
+			score += questionList.SD[counter];
+			counter++
+			$(".question").html("<h4>" + questionList.questions[counter] + "</h4>");
+			console.log(counter + " " + score);
+		}
+	)
+
+	
+
+
+</script>
+
+
+</body>
+</html>
