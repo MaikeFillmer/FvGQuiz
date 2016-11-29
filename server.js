@@ -11,7 +11,7 @@ var mysql      = require('mysql');
 
 
 //connection
-//var connection = require('./config/connection.js');
+var connection = require('./config/connection.js');
 
 
 // EXPRESS CONFIGURATION

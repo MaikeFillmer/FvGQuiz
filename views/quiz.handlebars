@@ -1,3 +1,4 @@
+<div class=" animated zoomIn">
 <div class="row">
 	<div class="col-md-12 text-center">
 		<h1>Fixed vs Growth Mindset Quiz</h1>
@@ -6,16 +7,31 @@
 <br />
 <br />
 <br />
-<div class="row">
-	<div class="col-md-5 col-md-offset-1 question">
-	 <h4>Your intelligence is something very basic about you that you cannot change very much.</h4>
-	</div>
-	<div class="col-md-5">
-		<div class="btn-group btn-group-justified ">
-		  <a href="#" class="btn btn-default hvr-grow" id="strong-agree">Strongly Agree</a>
-		  <a href="#" class="btn btn-default hvr-grow" id="agree">Agree</a>
-		  <a href="#" class="btn btn-default hvr-grow" id="disagree">Disagree</a>
-		  <a href="#" class="btn btn-default hvr-grow" id="strong-disagree">Strongly Disagree</a>
+<form method="POST" action="/submit">
+	{{#each question}}
+		<div class="row">
+			<div class="col-md-5 col-md-offset-1 question">
+	 			<h4>{{this.question}}</h4>
+			</div>
+			<div class="col-md-5">
+				<div class="btn-group btn-group-justified" role="group" data-toggle="buttons">
+		  			<label class="btn btn-default hvr-grow-shadow"><input type="radio" name="sa{{this.id}}">Strongly Agree</label>
+					<label class="btn btn-default hvr-grow-shadow"><input type="radio" name="aa{{this.id}}">Agree</label>
+					<label class="btn btn-default hvr-grow-shadow"><input type="radio" name="dd{{this.id}}">Disagree</label>
+					<label class="btn btn-default hvr-grow-shadow"><input type="radio" name="sd{{this.id}}">Strongly Disagree</label>
+				</div>
+			</div>
 		</div>
+	{{/each}}
+
+
+<div class="row">
+	<div class="col-md-12 text-center">
+	<br />
+	<br />
+		<button type="submit" class="btn btn-default hvr-grow">Submit!</button>
 	</div>
+</div>
+</form>
+
 </div>

@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Maike Fillmer",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4"
+  }
 }
