@@ -26,7 +26,7 @@ module.exports = function(app){
     	var results = [];
     	console.log(req.body)
     	for (var key in req.body) {
-    		if (req.body.hasOwnProperty(key)) {
+    		console.log(key + " right now")
     			if(key.includes("sa")){
     				orm.getScore(key[2], function(place){
     					score += place[0].agreeS;
@@ -64,11 +64,6 @@ module.exports = function(app){
 						}
     				})
 				}
-					
-
-
-    			
-    		}
     	}
 
     	
@@ -92,13 +87,8 @@ module.exports = function(app){
 				result.paragraph = "text here"
 			}
 			console.log(result)
-			return result;
+			res.render('submit', {result})
 		}
-
-		
-
-    	res.render('submit', {req})
-
 
     })
 }
