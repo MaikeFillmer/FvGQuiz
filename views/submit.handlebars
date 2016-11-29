@@ -1,4 +1,12 @@
-<div class=" animated zoomIn">
-	<h1> {{req.body.question}}</h1>
+<div class="animated zoomIn text-center well" style="background-color:#FFFFFF;">
+	<h1> You have a {{result.name}}</h1>
+	<div class="progress">
+	  <div class=" progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{result.score}}"
+	  aria-valuemin="0" aria-valuemax="45" style="width:{{result.percent}}%">
+	    {{result.score}} Points
+	  </div>
+	</div>
+	<br />
+	<h1> {{result.paragraph}}</h1>
 
 </div>

@@ -86,6 +86,7 @@ module.exports = function(app){
 				result.score = score;
 				result.paragraph = "text here"
 			}
+			result.percent = Math.round(score/45*100);
 			console.log(result)
 			res.render('submit', {result})
 		}
