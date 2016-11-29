@@ -16,7 +16,7 @@ var orm = {
 			
 		});
 	},
-	
+	 
 	// addBurgers: function(addBurger, callback) {
 	// 	connection.query('INSERT INTO burgers SET ?' , {burgerName : addBurger}, function(err, result) {
 	// 		if (err) throw err;
