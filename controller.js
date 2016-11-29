@@ -72,19 +72,27 @@ module.exports = function(app){
 			if(score >= 45) {
 				result.name = "Strong Growth Mindset";
 				result.score = score;
-				result.paragraph = "text here"
+				result.paragraph = "Your results indicate that you have a "
+				result.paragraph2 = "Strong Growth mindset";
+				result.paragraph3 = " which is a great way to continue to learn and challenge yourself in a positive way!";
 			} else if (score >=34 && score <= 44) {
 				result.name = "Growth Mindset with some Fixed ideas";
 				result.score = score;
-				result.paragraph = "text here"
+				result.paragraph = "Your results indicate that you have a "
+				result.paragraph2 = "Growth Mindset with some Fixed ideas";
+				result.paragraph3 = " which means that while you mostly grow from challenging experiences, there are still some ideas which fall into the Fixed mindset.";
 			} else if (score >= 21 && score <= 33){
 				result.name = "Fixed Mindset with some Growth ideas";
 				result.score = score;
-				result.paragraph = "text here"
+				result.paragraph = "Your results indicate that you have a "
+				result.paragraph2 = "Fixed Mindset with some Growth ideas";
+				result.paragraph3 = " which means that while you have mostly Fixed ideas, you also have some Growth mindset ideas, so you can build on increasing them!";
 			} else {
 				result.name = "Strong Fixed Mindset";
 				result.score = score;
-				result.paragraph = "text here"
+				result.paragraph = "Your results indicate that you have a "
+				result.paragraph2 = "Strong Fixed Mindset";
+				result.paragraph3 = ". Look at the image below to get some ideas on how to move into the Growth Mindset!";
 			}
 			result.percent = Math.round(score/45*100);
 			console.log(result)
