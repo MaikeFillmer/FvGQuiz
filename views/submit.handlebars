@@ -1,10 +1,12 @@
 <div class="animated zoomIn text-center well" style="background-color:#FFFFFF;">
 	<h1> You have a {{result.name}}</h1>
-	<div class="progress">
-	  <div class=" progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{result.score}}"
-	  aria-valuemin="0" aria-valuemax="45" style="width:{{result.percent}}%">
-	    {{result.score}} Points
-	  </div>
+	<div class="col-md-8 col-md-offset-2">
+		<div class="progress">
+		  <div class=" progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{result.score}}"
+		  aria-valuemin="0" aria-valuemax="45" style="width:{{result.percent}}%">
+		    {{result.score}} Points
+		  </div>
+		</div>
 	</div>
 	<br />
 	<h1> {{result.paragraph}}</h1>
