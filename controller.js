@@ -13,6 +13,7 @@ module.exports = function(app){
         
     });
     app.post('/submit', function(req,res) {
+
     	var score = 0;
     	
     	var keyCount = 0;
@@ -21,6 +22,10 @@ module.exports = function(app){
     			keyCount++;
     		}
     	}
+
+    	if(keyCount < 20){
+    		res.render('error');
+    	} else {
 
     	var results = [];
     	console.log(req.body)
@@ -97,6 +102,6 @@ module.exports = function(app){
 			console.log(result)
 			res.render('submit', {result})
 		}
-
+	}
     })
 }
