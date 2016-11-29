@@ -1,6 +1,5 @@
 var path = require('path');
 var orm = require('./config/orm.js');
-var async = require('async');
 
 module.exports = function(app){
 	app.get('/', function(req,res) {
